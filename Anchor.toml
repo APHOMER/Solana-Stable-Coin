@@ -1,0 +1,39 @@
+[toolchain]
+ anchor_version = "0.30.0"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+stable_coin = "3jYnJ7ZFi9EXFh7fCEkj38H4mFZwgBrrZ2ejD7g9Ykxw"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+
+[test]
+startup_wait = 5000
+shutdown_wait = 2000
+upgradable = false
+
+[test.validator]
+bind_address = "0.0.0.0"
+url = "https://api.mainet-beta.solana.com"
+ledger = ".anchor/test-ledger"
+rpc_port = 9999
+
+[[test.validator.clone]]
+address = "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3"
+
+
+
+
+

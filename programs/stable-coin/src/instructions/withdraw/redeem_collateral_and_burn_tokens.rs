@@ -67,4 +67,3 @@ pub fn process_redeem_collateral_and_burn_tokens(ctx: Context<RedeemCollateralAn
     Ok(())
 }
 
-
